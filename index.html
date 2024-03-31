@@ -3,150 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ceaeae;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #876a6a;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .cookie {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .cookie:hover {
-            transform: scale(1.05);
-        }
-        .cookie img {
-            width: 150px;
-            height: 150px;
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .cookie h2 {
-            text-align: center;
-            margin-top: 10px;
-            color: #555;
-            font-size: 1.5rem;
-        }
-        .cookie p {
-            text-align: center;
-            margin-top: 10px;
-            color: #777;
-        }
-        button {
-            display: block;
-            margin: 0 auto;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .wallet-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .wallet {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Home Page</title>
 </head>
 <body>
-
-<div class="container">
-    <h1>Welcome to the Cookie Shop!</h1>
-
-    <div class="cookie">
-        <img src="https://via.placeholder.com/150" alt="Cookie">
-        <h2>Delicious Cookie</h2>
-        <p>Price: $1 per cookie</p>
-        <button onclick="buyCookie()">Buy Cookie</button>
-    </div>
-
-    <div class="cookie">
-        <img src="https://via.placeholder.com/150" alt="Cookie">
-        <h2>Yummy Chocolate Chip Cookie</h2>
-        <p>Price: $1.5 per cookie</p>
-        <button onclick="buyChocolateChipCookie()">Buy Chocolate Chip Cookie</button>
-    </div>
-
-    <div class="cookie">
-        <img src="https://via.placeholder.com/150" alt="Cookie">
-        <h2>Scrumptious Oatmeal Raisin Cookie</h2>
-        <p>Price: $2 per cookie</p>
-        <button onclick="buyOatmealRaisinCookie()">Buy Oatmeal Raisin Cookie</button>
-    </div>
-
-    <div class="wallet-container">
-        <h2 class="wallet">Your Wallet: <span id="wallet">$10</span></h2>
-    </div>
-</div>
-
-<script>
-    let wallet = 10;
-
-    function buyCookie() {
-        if (wallet >= 1) {
-            wallet -= 1;
-            updateWallet();
-            alert("You bought a delicious cookie!");
-        } else {
-            alert("You don't have enough money to buy this cookie!");
-        }
-    }
-
-    function buyChocolateChipCookie() {
-        if (wallet >= 1.5) {
-            wallet -= 1.5;
-            updateWallet();
-            alert("You bought a yummy chocolate chip cookie!");
-        } else {
-            alert("You don't have enough money to buy this cookie!");
-        }
-    }
-
-    function buyOatmealRaisinCookie() {
-        if (wallet >= 2) {
-            wallet -= 2;
-            updateWallet();
-            alert("You bought a scrumptious oatmeal raisin cookie!");
-        } else {
-            alert("You don't have enough money to buy this cookie!");
-        }
-    }
-
-    function updateWallet() {
-        document.getElementById("wallet").textContent = "$" + wallet.toFixed(2);
-    }
-</script>
-
+    <header>
+        <h1>Welcome to My Website!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Welcome to my home page</h2>
+        <p>This is the home page of my website.</p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
 </body>
 </html>
 
