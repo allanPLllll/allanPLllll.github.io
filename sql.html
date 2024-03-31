@@ -3,32 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL</title>
+    <title>C++</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        #hero .title {
+            margin-top: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h2 {
+            color: white;
+        }
+        .sections-container {
+            display: flex;
+            justify-content: space-between; /* Distribute items evenly */
+            /* Add margin between rows */
+        }
+
+        .clickable-section {
+            background-color: #FFEB3B; /* Yellow */
+            padding: 0px;
+            margin: 0px; /* Add margin between sections */
+            color: #000; /* Text color */
+            cursor: pointer; /* Change cursor to pointer */
+            width: calc(1/6*100%); /* Set width to 1/6th of the container */
+            height: 7vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            transition: all 0.3s; /* Smooth transition for size change */
+            box-shadow: none;
+            border: none;
+            outline: none;
+        }
+
+        /* Add hover effect */
+        .clickable-section:hover {
+            transform: scale(1.1); /* Increase size by 10% */
+            filter: brightness(90%);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>SQL</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="html_css.html">HTML/CSS</a></li>
-                <li><a href="javascript.html">JavaScript</a></li>
-                <li><a href="cplusplus.html">C++</a></li>
-                <li><a href="sql.html">SQL</a></li>
-                <li><a href="react.html">React</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+<body style="background-color: white;">
     <main>
-        <h2>SQL</h2>
-        <p>SQL (Structured Query Language) is a standard language for managing and manipulating databases. It's used for tasks such as querying data, updating records, and creating database schemas.</p>
-    </main>
+        <div class="sections-container">
+            <a href="about.html" class="clickable-section" style="background-color: #00A5E3;">
+                <h2>About Me</h2>
+            </a>
+        
+            <a href="html_css.html" class="clickable-section" style="background-color: #8DD7BF;">
+                <h2>HTML/CSS</h2>
+            </a>
+        
+            <a href="javascript.html" class="clickable-section" style="background-color: #FF96C5;">
+                <h2>Javascript</h2>
+            </a>
     
-    <footer>
-        <p>&copy; 2024 My Coding Journey</p>
-    </footer>
+            <a href="cplusplus.html" class="clickable-section" style="background-color: #FF5768;">
+                <h2>C++</h2>
+            </a>
+        
+            <a href="sql.html" class="clickable-section" style="background-color: #00A5E3;">
+                <h2>SQL</h2>
+            </a>
+    
+            <a href="react.html" class="clickable-section" style="background-color: #8DD7BF;">
+                <h2>React</h2>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Get all clickable-section elements
+        const clickableSections = document.querySelectorAll('.clickable-section');
+
+        // Add event listeners to each clickable-section element
+        clickableSections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'scale(1.1)'; // Increase size by 10%
+                section.style.transfrom = 'brightness(90%)';
+                section.style.zIndex = '2';
+            });
+
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'scale(1)'; // Reset size
+                section.style.zIndex = '1';
+            });
+        });
+    </script>
 </body>
 </html>
