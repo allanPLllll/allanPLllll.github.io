@@ -1,7 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .cookie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .cookie img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        .cookie h2 {
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+        }
+        .cookie p {
+            text-align: center;
+            margin-top: 10px;
+            color: #777;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<div class="container">
+    <h1>Welcome to the Cookie Shop!</h1>
+
+    <div class="cookie">
+        <img src="cookie_image.jpg" alt="Cookie">
+        <h2>Delicious Cookie</h2>
+        <p>Price: $1 per cookie</p>
+        <button onclick="buyCookie()">Buy Cookie</button>
+    </div>
+
+    <div class="cookie">
+        <img src="cookie_image.jpg" alt="Cookie">
+        <h2>Yummy Chocolate Chip Cookie</h2>
+        <p>Price: $1.5 per cookie</p>
+        <button onclick="buyChocolateChipCookie()">Buy Chocolate Chip Cookie</button>
+    </div>
+
+    <div class="cookie">
+        <img src="cookie_image.jpg" alt="Cookie">
+        <h2>Scrumptious Oatmeal Raisin Cookie</h2>
+        <p>Price: $2 per cookie</p>
+        <button onclick="buyOatmealRaisinCookie()">Buy Oatmeal Raisin Cookie</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Your Wallet: <span id="wallet">$10</span></h2>
+    </div>
+</div>
+
+<script>
+    let wallet = 10;
+
+    function buyCookie() {
+        if (wallet >= 1) {
+            wallet -= 1;
+            document.getElementById("wallet").textContent = "$" + wallet.toFixed(2);
+            alert("You bought a delicious cookie!");
+        } else {
+            alert("You don't have enough money to buy this cookie!");
+        }
+    }
+
+    function buyChocolateChipCookie() {
+        if (wallet >= 1.5) {
+            wallet -= 1.5;
+            document.getElementById("wallet").textContent = "$" + wallet.toFixed(2);
+            alert("You bought a yummy chocolate chip cookie!");
+        } else {
+            alert("You don't have enough money to buy this cookie!");
+        }
+    }
+
+    function buyOatmealRaisinCookie() {
+        if (wallet >= 2) {
+            wallet -= 2;
+            document.getElementById("wallet").textContent = "$" + wallet.toFixed(2);
+            alert("You bought a scrumptious oatmeal raisin cookie!");
+        } else {
+            alert("You don't have enough money to buy this cookie!");
+        }
+    }
+</script>
+
 </body>
 </html>
